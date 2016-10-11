@@ -1,0 +1,22 @@
+/* CSS declarations go here */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.nav-list {
+  list-style-type: none;
+}
+.nav-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.author-box {
+  display: inline-block;
+  margin-left: 10px;
+}
+.author-box span{
+  margin-left: 5px;
+}
+button {
+  margin-left: 15px;
+}
