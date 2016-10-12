@@ -1,11 +1,26 @@
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
-import { check } from 'meteor/check'
+import { check } from 'meteor/check';
  
 export const Posts = new Mongo.Collection('posts');
 
 if (Meteor.isServer) {
-  // This code only runs on the server
+  Posts.insert({
+    title: "Title init 1",
+    text: "Text init 1",
+    createdAt: new Date().toString(),
+    like: 0,
+    dislike: 0,
+  });
+
+  Posts.insert({
+    title: "Title init 2",
+    text: "Text init 2",
+    createdAt: new Date().toString(),
+    like: 0,
+    dislike: 0,
+  });
+
   Meteor.publish('posts', function postsPublication() {
     return Posts.find();
   });
