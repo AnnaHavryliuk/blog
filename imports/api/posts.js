@@ -5,14 +5,6 @@ import { check } from 'meteor/check';
 export const Posts = new Mongo.Collection('posts');
 
 if (Meteor.isServer) {
-  Posts.insert({
-    title: "Title init 1",
-    text: "Text init 1",
-    createdAt: new Date().toString().substr(0, 31),
-    like: 0,
-    dislike: 0,
-  });
-
   Meteor.publish('posts', function postsPublication() {
     return Posts.find();
   });
