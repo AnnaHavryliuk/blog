@@ -8,15 +8,7 @@ if (Meteor.isServer) {
   Posts.insert({
     title: "Title init 1",
     text: "Text init 1",
-    createdAt: new Date().toString(),
-    like: 0,
-    dislike: 0,
-  });
-
-  Posts.insert({
-    title: "Title init 2",
-    text: "Text init 2",
-    createdAt: new Date().toString(),
+    createdAt: new Date().toString().substr(0, 31),
     like: 0,
     dislike: 0,
   });
@@ -36,7 +28,7 @@ Meteor.methods({
     Posts.insert({
       title,
       text,
-      createdAt: date.toString(),
+      createdAt: date.toString().substr(0, 31),
       like: 0,
       dislike: 0,
     });

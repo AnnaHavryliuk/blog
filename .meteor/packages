@@ -19,3 +19,5 @@ ecmascript@0.5.8_1              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.2.1            # Server-side component of the `meteor shell` command
 
 react-meteor-data
+twbs:bootstrap
+kadira:flow-router

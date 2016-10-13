@@ -20,20 +20,37 @@ export default class Post extends Component {
 
   render() {
     return (
-      <article>
-        <header>
-          <h2>{ this.props.post.title }</h2>
-          <span>{this.props.post.createdAt}</span>
-          <button onClick={ this.deletePost.bind(this) }>delete</button>
+      <article className="post">
+        <header className="margin-bttm">
+        <div className="row">
+          <div className="col-xs-12 col-sm-10 col-md-10">
+            <h3>{ this.props.post.title }</h3>
+            <span>{this.props.post.createdAt}</span>
+          </div>
+
+          <div className="col-xs-12 col-sm-2 col-md-2 delete-btn-box">
+            <button className="btn btn-danger btn-sm" onClick={ this.deletePost.bind(this) }><span className="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+          </div>
+        </div>
         </header>
-        <div>{this.props.post.text}</div>
-        <footer>
-          <button onClick={ this.addLike.bind(this, true) }>
-            likes: { this.props.post.like }
-          </button>
-          <button onClick={ this.addLike.bind(this, false) }>
-            dislikes: { this.props.post.dislike }
-          </button>
+
+        <div className="row margin-bttm">
+          <div className="col-xs-12 col-sm-12 col-md-12">
+            {this.props.post.text}
+          </div>
+        </div>
+
+        <footer className="margin-bttm">
+          <div className="row">
+            <div className="col-xs-12">
+              <button className="btn btn-sm like-btn button-violet" onClick={ this.addLike.bind(this, true) }>
+              <span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> ({ this.props.post.like })
+              </button>
+              <button className=" btn like-btn btn-sm button-violet" onClick={ this.addLike.bind(this, false) }>
+              <span className="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> ({ this.props.post.dislike })
+              </button>
+            </div>
+          </div>
         </footer>
       </article>
     );
@@ -41,5 +58,5 @@ export default class Post extends Component {
 }
 
 Post.propTypes = {
-  post: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired
 };

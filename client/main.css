@@ -1,22 +1,66 @@
 /* CSS declarations go here */
 body {
+  margin: 0;
+  min-width: 300px;
   font-family: sans-serif;
   font-size: 16px;
+  background-color: #f1d4fe;
+  color: #6a0098;
 }
-.nav-list {
-  list-style-type: none;
+.nav-bar {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  background: linear-gradient(0deg, #856394 0%, #856394 5%, #D7C5E8 95%, #D7C5E8 100%);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
-.nav-list li {
-  display: inline-block;
-  margin-left: 15px;
+.blog-name:visited, .blog-name:active, .blog-name:link {
+  text-decoration: none;
+  color: #6a0098;
 }
-.author-box {
-  display: inline-block;
-  margin-left: 10px;
+.blog-name:hover {
+  text-decoration: none;
+  color: #f1d4fe;
 }
-.author-box span{
+.author-name {
+  color: #f1d4fe;
+}
+.author-name span {
   margin-left: 5px;
 }
-button {
-  margin-left: 15px;
+.create-post {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  text-align: right;
+}
+.button-violet, .button-violet:visited, .button-violet:active, .button-violet:link {
+  border: none;
+  background-color: #7a518f;
+  box-shadow: 0px 0px 1px 2px #704c87;
+  color: #f1d4fe;
+}
+
+.button-violet:hover {
+  background-color: #9a7caa;
+  box-shadow: 0px 0px 1px 2px #9a7caa;
+  color: #f1d4fe;
+}
+.post {
+  padding: 8px;
+  margin-top: 15px;
+  background-color: #d7c5e8;
+  box-shadow: 0px 0px 1px 2px #cfbce0;
+}
+.delete-btn-box {
+  padding-top: 12px;
+  text-align: right;
+}
+.like-btn {
+  margin-left: 10px;
+}
+.margin-bttm {
+  margin-bottom: 10px;
+}
+.not-resizable {
+  resize: none;
 }
